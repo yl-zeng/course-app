@@ -29,6 +29,9 @@ export var coursesReducer = (state = [],action)=>{
         ...state,
         action.course
       ];
+    case "CLEAR_COURSES":
+      console.log("course cleared");
+      return [];
     default:
       return state;
 

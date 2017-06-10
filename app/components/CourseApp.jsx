@@ -15,6 +15,10 @@ export class CourseApp extends React.Component{
     var {dispatch} = this.props;
     var email = firebase.auth().currentUser.email.replace(".","+");
     dispatch(actions.startInitialize(email));
+  }
+
+  componentWillMount(){
+    var {dispatch} = this.props;
     dispatch(actions.startAddCourses());
   }
 

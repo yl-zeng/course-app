@@ -68,6 +68,7 @@ export var startInitialize= (email)=>{
         dispatch(initialize(email));
         dispatch(addEmail(email));
       }
+      // add fetched email set to store
       dispatch(addEmails(parsedEmails));
     });
   }
@@ -129,10 +130,17 @@ export var startLogin = ()=>{
   };
 };
 
+export var clearCourses = ()=>{
+  return {
+    type:"CLEAR_COURSES"
+  };
+};
+
 export var startLogout = ()=>{
   return (dispatch,getState)=>{
     return firebase.auth().signOut().then(()=>{
       console.log("Logged out!");
+      dispatch(clearCourses());
     });
   };
 };
