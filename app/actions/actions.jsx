@@ -33,16 +33,6 @@ export var initialize = (email)=>{
 };
 
 
-// Add new email for firebase
-export var addEmail = (email)=>{
-  return (dispatch,getState)=>{
-    var emailsRef = firebaseRef.child("emails");
-    var c = {};
-    c[email] = true;
-    emailsRef.set(c);
-  };
-};
-
 // after fetch emails from firebase, push them into store
 export var addEmails = (emails)=>{
   return {
@@ -60,13 +50,17 @@ export var startInitialize= (email)=>{
       var emails = snapshot.val()||{};
       var parsedEmails = [];
 
-      Object.keys(emails).forEach((email)=>{
-        parsedEmails.push(email);
+      Object.keys(emails).forEach((c)=>{
+        parsedEmails.push(c);
       });
       // new email log in
       if(!emails[email]){
+        // for this email, initialize default courses from inventory.json
         dispatch(initialize(email));
-        dispatch(addEmail(email));
+        // Add this email to firebase
+        emails[email] = true;
+        emailsRef.set(emails);
+        parsedEmails.push(email);
       }
       // add fetched email set to store
       dispatch(addEmails(parsedEmails));
