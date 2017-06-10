@@ -21,13 +21,13 @@ export class Login extends React.Component{
               <h1>Login</h1>
               <h3>React v15 + Redux + React-Router v4 + Firebase + Node.js</h3>
             </div>
-            <ul style={{position:"absolute",left:"30%"}}>
-              <li>OAuth Authentication</li>
-              <li>Pagination Courses</li>
-              <li>Detail view</li>
-              <li>Course Manipulate</li>
+            <ul style={{position:"absolute",left:"20%"}}>
+              <li><h3>OAuth Authentication</h3></li>
+              <li><h3>Pagination Courses</h3></li>
+              <li><h3>Detail view</h3></li>
+              <li><h3>Course Manipulate</h3></li>
             </ul>
-            <div className="text-center" style={{marginTop:"120px"}}>
+            <div className="text-center" style={{marginTop:"240px"}}>
               <button className="btn btn-primary" onClick={this.onLogin}>Login with Github</button>
             </div>
           </div>
