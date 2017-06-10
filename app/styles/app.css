@@ -1,0 +1,74 @@
+input {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.page-title {
+  margin:50px 0 20px 0;
+}
+
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px 0 0;
+}
+
+.dashboard {
+  text-align: center;
+  position: fixed;
+  right:2%;
+  padding: 0 10px 10px 10px;
+  background: #fafafa;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+}
+
+
+.paginate-box{
+  margin:0 auto !important;
+}
+
+.login-window{
+  padding-bottom: 50px !important;
+}
+
+.main-window {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0px;
+}
+
+.window__footer {
+  border-top: 1px solid #dddddd;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.window__message {
+  color: #999;
+  margin: 10px auto;
+  text-align:center;
+}
+
+
+.window__header {
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.window__header :first-child{
+  padding-bottom: 10px;
+}
+
+.window__header label{
+  cursor:pointer;;
+  font-size: 1rem;
+}
+
+.window__header :last-child{
+  align-items: center;
+  display: flex;
+}
